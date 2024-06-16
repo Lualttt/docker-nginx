@@ -23,6 +23,9 @@ RUN adduser --system --no-create-home --disabled-login --disabled-password --gro
 # config dirs
 RUN mkdir /opt/nginx/http.conf.d && mkdir /opt/nginx/stream.conf.d && mkdir /opt/nginx/rtmp.conf.d
 
+RUN mkdir /var/www
+RUN mkdir /var/www/livestreaming
+
 ADD nginx.conf /opt/nginx/conf/nginx.conf
 ADD zero_downtime_reload.sh /opt/nginx/sbin/zero_downtime_reload.sh
 
