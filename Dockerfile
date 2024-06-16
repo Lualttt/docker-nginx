@@ -6,7 +6,7 @@ RUN apt-get update && apt-get -y upgrade && \
 
 WORKDIR /opt
 
-RUN wget https://github.com/sergey-dryabzhinsky/nginx-rtmp-module-archive/refs/tags/v1.2.2-r1.tar.gz -O "nginx-rtmp-module.tar.gz" && \
+RUN wget https://github.com/sergey-dryabzhinsky/nginx-rtmp-module/archive/refs/tags/v1.2.2-r1.tar.gz -O "nginx-rtmp-module.tar.gz" && \
     tar -zxvf nginx-rtmp-module.tar.gz && \
     mv nginx-rtmp-module-* nginx-rtmp-module
 
