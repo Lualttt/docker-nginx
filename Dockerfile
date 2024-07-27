@@ -13,7 +13,7 @@ RUN wget https://github.com/sergey-dryabzhinsky/nginx-rtmp-module/archive/refs/t
 RUN wget http://nginx.org/download/nginx-1.23.1.tar.gz && \
     tar -zxvf nginx-1.*.tar.gz && \
     cd nginx-1.* && \
-    ./configure --prefix=/opt/nginx --user=nginx --group=nginx --with-http_ssl_module --with-ipv6 --with-threads --with-stream --with-stream_ssl_module --add-module=../nginx-rtmp-module && \
+    ./configure --prefix=/opt/nginx --user=nginx --group=nginx --with-http_ssl_module --with-ipv6 --with-threads --with-stream --with-stream_ssl_module --with-stream_ssl_preread_module --add-module=../nginx-rtmp-module && \
     make && make install && \
     cd .. && rm -rf nginx-1.* && \
     rm -rf nginx-rtmp*
